@@ -11,6 +11,6 @@
   },
   "scripts": {
     "serve": "marp --html -s .",
-    "build": "marp --html index.md -o public/index.html && cp -r images public/images --title 'Pensando em CSS' --url https://pensando-em-css.netlify.com"
+    "build": "marp --html index.md -o public/index.html --title 'Pensando em CSS' --url https://pensando-em-css.netlify.com && cp -r images public/images"
   }
 }
