@@ -324,18 +324,166 @@ Layout similar ao *flow* mas divido em colunas, típico do design gráfico. Exis
 
 # Flex
 
-(aka panaceia)
+O mais imitado 🤷
 
 ---
 
-<!-- TODO -->
+- Layout unidimensional (com wrap)
+- Controle sobre crescimento e encolhimento
+- Controle sobre alinhamento nas duas dimensões
 
 ---
 
 # Grid
 
-<!-- TODO: headline -->
+Apenas use. Você vai ver grid em tudo
 
 ---
 
-<!-- TODO -->
+- Layout bidimensional
+- Nova unidade: `fr`
+- Novos valores: `min-content`, `max-content`
+- Novas funções: `repeat`, `minmax`, `fit-content`
+
+---
+
+<!-- _footer: Photo by viklundvisuals on Unsplash -->
+
+<style scoped>
+.grid-overlap {
+  height: 85%;
+  display: grid;
+  grid-template-columns: 1fr 32ch 1fr;
+  grid-template-rows: 300px 3em 1fr;
+}
+
+.grid-overlap * {
+  margin: 0;
+}
+
+.grid-overlap :nth-child(1) {
+  grid-row: 1 / 3;
+  grid-column: 1 / -1;
+  
+}
+
+.grid-overlap :nth-child(1) img {
+  width: 100% !important;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-overlap :nth-child(2) {
+  padding: 0.5em;
+  grid-row: 2 / 4;
+  grid-column: 2;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 4pt;
+}
+</style>
+
+<div class="grid-overlap">
+
+![w:500px](images/surf.jpg)
+
+Venha pro nosso treino de surf e reprograme o seu DNA com nossas técnicas quânticas. Resultado garantido!
+
+</div>
+
+---
+
+<div class="iframe-wrapper">
+  <iframe
+    height="700"
+    style="width: 100%;"
+    scrolling="no"
+    title="Fallback de grid"
+    src="https://codepen.io/vhfmag/embed/XWJJxry?height=700&theme-id=dark&default-tab=result"
+    frameborder="no"
+    allowtransparency="true"
+    allowfullscreen="true"
+  >
+    See the Pen <a href='https://codepen.io/vhfmag/pen/XWJJxry'>Fallback de grid</a> by Victor Magalhães (<a href='https://codepen.io/vhfmag'>@vhfmag</a>) on <a href='https://codepen.io'>CodePen</a>.
+  </iframe>
+</div>
+
+---
+
+# Expressividade do CSS
+
+---
+
+<style scoped>
+  blockquote {
+    text-align: justify;
+    text-align-last: left;
+  }
+</style>
+
+> Paragraphs of text that are too long are difficult to follow, and paragraphs of text that are too thin are difficult to read. **Ideally, blocks of text should be roughly 70 characters wide**. Be sure to keep them at least between 50 and 120 characters wide.
+> — [Página de tipografia do design system da Adobe](https://spectrum.adobe.com/page/typography/)
+
+---
+
+```css
+p {
+  width: 70ch; /* 🤷 */
+}
+```
+
+---
+
+**Tipografia fluida**
+Ex: de 16 a 24px, de 400 a 600px de largura de tela
+
+---
+
+<div class="iframe-wrapper">
+  <iframe
+    height="700"
+    style="width: 100%;"
+    scrolling="no"
+    title="Fallback de grid"
+    src="https://codepen.io/vhfmag/embed/QWwbPVK?height=700&theme-id=dark&default-tab=result"
+    frameborder="no"
+    allowtransparency="true"
+    allowfullscreen="true"
+  >
+    See the Pen <a href='https://codepen.io/vhfmag/pen/QWwbPVK'>Fallback de grid</a> by Victor Magalhães (<a href='https://codepen.io/vhfmag'>@vhfmag</a>) on <a href='https://codepen.io'>CodePen</a>.
+  </iframe>
+</div>
+
+---
+
+```css
+body {
+  font-size: 4vw;
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 24px;
+  }
+}
+```
+
+---
+
+```css
+/* Safari 11.1+ & Chrome 79+ */
+body {
+  font-size: min(max(16px, 4vw), 24px);
+}
+
+/* Chrome 79+ */
+body {
+  font-size: clamp(16px, 4vw, 24px);
+}
+```
