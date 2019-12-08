@@ -1,4 +1,9 @@
 ---
+title: Pensando em CSS
+url: https://pensando-em-css.netlify.com
+image: og.png
+description: Falando a mesma língua que o navegador
+
 theme: my-uncover
 marp: true
 autoScaling: true
@@ -393,8 +398,10 @@ Use a cascata... as vezes
 <!-- _class: two-col -->
 
 - `block`
-- `inline`
 - `inline-block`
+- `inline`
+- `table`
+- `inline-table`
 - `grid`
 - `inline-grid`
 - `flex`
@@ -425,6 +432,8 @@ Use a cascata... as vezes
 - `block` ↔ `block flow-root`
 - `inline-block` ↔ `inline flow-root`
 - `inline` ↔ `inline flow`
+- `table` ↔ `block table`
+- `inline-table` ↔ `inline table`
 - `grid` ↔ `block grid`
 - `inline-grid` ↔ `inline grid`
 - `flex` ↔ `block flex`
@@ -650,6 +659,8 @@ Venha pro nosso treino de surf e reprograme o seu DNA com nossas técnicas quân
 </div>
 
 ---
+
+<!-- _class: invert -->
 
 # Expressividade do CSS
 

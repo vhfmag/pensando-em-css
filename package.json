@@ -10,8 +10,8 @@
     "@marp-team/marp-cli": "^0.16.2"
   },
   "scripts": {
-    "generate-og-image": "marp --theme style.css marp --image png -o public/og.png --allow-local-files index.md",
-    "serve": "marp --theme style.css --html -s .",
-    "build": "yarn generate-og-image && marp --theme style.css --html index.md -o public/index.html --title 'Pensando em CSS' --url https://pensando-em-css.netlify.com --og-image og.png && cp -r images public/images"
+    "generate-og-image": "marp --image png -o public/og.png index.md",
+    "serve": "marp --html -s .",
+    "build": "yarn generate-og-image && marp index.md -o public/index.html && cp -r images public/images"
   }
 }

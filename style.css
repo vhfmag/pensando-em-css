@@ -25,6 +25,12 @@ section.two-col p {
   column-count: 2;
 }
 
+section.three-col ul,
+section.three-col ol,
+section.three-col p {
+  column-count: 3;
+}
+
 .resizable {
   resize: both;
   overflow: scroll;
