@@ -1,3 +1,0 @@
-[build]
-  publish = "public"
-  command = "yarn add puppeteer && CHROME_PATH=$(node log-chrome-path.js) yarn build"
