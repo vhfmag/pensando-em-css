@@ -1,57 +1,20 @@
 ---
-theme: uncover
+theme: my-uncover
 marp: true
-paginate: true
 autoScaling: true
 ---
-
-<style>
-section.lead h1, section.lead h2 {
-  color: hsl(0, 0%, 100%);
-}
-
-section.lead h1 {
-  text-align: left;
-}
-
-section.hipster-quote {
-  color: white;
-  justify-content: flex-end;
-  padding-bottom: 1.5em;
-}
-
-section.two-col ul,
-section.two-col ol,
-section.two-col p {
-  column-count: 2;
-}
-
-.resizable {
-  resize: both;
-  overflow: scroll;
-  margin: auto;
-}
-
-.iframe-wrapper {
-  width: 100%;
-  height: 700px;
-  resize: both;
-  overflow: scroll;
-  margin: auto;
-}
-
-iframe {
-  width: 100% !important;
-  height: 100% !important;
-}
-
-</style>
 
 <!-- _class: lead -->
 <!-- _footer: Photo by Mark Neal on Unsplash -->
 ![bg contrast:80% grayscale](images/first-bg.jpg)
 
 # <!-- fit --> Pensando<br>em CSS
+
+---
+
+- As frutuções
+- Os mitos
+- Pensando em CSS
 
 ---
 
@@ -89,7 +52,7 @@ iframe {
 # 2
 
 ## <s>Ai, mas a cascata</s>
-## Cascata torna o resultado imprevisível
+## Cascata torna o resultado final imprevisível
 
 ---
 
@@ -120,7 +83,7 @@ iframe {
 ---
 
 1. Vocabulário extenso dificulta aprendizado
-2. Cascata torna o resultado imprevisível
+2. Cascata torna o resultado final imprevisível
 3. Difícil alterar e deletar código
 4. Retrocompatibilidade trava o desenvolvimento
 
@@ -143,9 +106,9 @@ Se nem todo browser a que damos suporte suporta, não podemos usar
 
 ---
 
-> Vixe, nem posso usar Grid por causa do IE 🤦
+> Eita nóis 🤦 Posso nem usar Grid por causa do IE 🙄
 
-<!-- _footer: Photo by Jacob Rank on Unsplash -->
+<!-- _footer: Photo by Caleb Lucas on Unsplash -->
 <!-- _class: hipster-quote -->
 ![bg grayscale](images/hipster.jpg)
 
@@ -321,7 +284,23 @@ O CSS é resiliente, aplique _progressive enhancement_ e seja feliz
 <!-- _class: invert -->
 # Mito 2 🧙
 
-Você precisa brigar com o navegador
+Você sempre precisa brigar com o navegador
+
+---
+
+<iframe
+  loading="lazy"
+  height="700"
+  style="width: 100%; margin: auto"
+  scrolling="no"
+  title="Fallback de grid"
+  src="https://codepen.io/brundolf/embed/gRaREv?height=700&theme-id=dark&default-tab=css,result"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+  See the Pen <a href='https://codepen.io/brundolf/pen/gRaREv'>CSS is Awesome</a> by Brandon (<a href='https://codepen.io/brundolf'>@brundolf</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ---
 
@@ -350,23 +329,9 @@ Você precisa brigar com o navegador
 
 ---
 
-<iframe
-  height="700"
-  style="width: 100%; margin: auto"
-  scrolling="no"
-  title="Fallback de grid"
-  src="https://codepen.io/brundolf/embed/gRaREv?height=700&theme-id=dark&default-tab=css,result"
-  frameborder="no"
-  allowtransparency="true"
-  allowfullscreen="true"
->
-  See the Pen <a href='https://codepen.io/brundolf/pen/gRaREv'>CSS is Awesome</a> by Brandon (<a href='https://codepen.io/brundolf'>@brundolf</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-
----
-
 <div class="iframe-wrapper">
   <iframe
+    loading="lazy"
     height="700"
     style="width: 100%;"
     scrolling="no"
@@ -386,7 +351,14 @@ Você precisa brigar com o navegador
 <!-- _class: invert -->
 # Fato 2 🕵
 
-O navegador sabe inferir layouts adaptativos, caso se use as ferramentas certas e um CSS que sugira ao invés de instruir
+Se você e o navegador falarem a mesma língua, você vai usar as ferramentas certas e delegar a ele o que ele sabe fazer melhor do que você
+
+<small style="margin-top: 1em;">
+
+- Evite tamanhos fixos e `position: absolute`
+- Pesquise o layout mais apropriado pro seu caso
+
+</small>
 
 ---
 <!-- 
@@ -413,6 +385,69 @@ Use a cascata... as vezes
 
 ---
 
+<!-- _class: invert -->
+# Os dois valores de display
+
+---
+
+<!-- _class: two-col -->
+
+- `block`
+- `inline`
+- `inline-block`
+- `grid`
+- `inline-grid`
+- `flex`
+- `inline-flex`
+
+---
+
+<style scoped>
+  li {
+    display: block grid;
+    text-align: center;
+    grid-template-columns: minmax(0, 1fr) 1em minmax(0, 1fr);
+  }
+
+  li :nth-child(2) {
+    text-align: left;
+    align-self: flex-start;
+    justify-self: flex-start;
+  }
+
+  li :nth-child(1) {
+    text-align: right;
+    align-self: flex-end;
+    justify-self: flex-end;
+  }
+</style>
+
+- `block` ↔ `block flow-root`
+- `inline-block` ↔ `inline flow-root`
+- `inline` ↔ `inline flow`
+- `grid` ↔ `block grid`
+- `inline-grid` ↔ `inline grid`
+- `flex` ↔ `block flex`
+- `inline-flex` ↔ `inline flex`
+
+---
+
+# <q>Outer display type (ODT)</q>
+
+`inline` & `block`
+
+Dita como o elemento se comporta no *flow layout*
+
+---
+
+# <q>Inner display type (IDT)</q>
+
+`flow`, `flow-root`, `table`, `flex` & `grid`
+
+Dita como o elemento dispõe seus filhos
+
+---
+
 <!-- _class: invert two-col -->
 # Layouts
 
@@ -436,6 +471,26 @@ O bom e velho layout, que de tão padrão a gente nem se dá conta
 
 ---
 
+- Filhos com ODT = `block` tomam a linha inteira
+- Filhos com ODT = `inline` tomam parte da linha e podem ser dividos entre linhas
+- A propriedade `float` permite que múltiplos elementos dividam a mesma linha
+
+---
+
+<iframe
+  loading="lazy"
+  height="700"
+  style="width: 100%;"
+  title="CSS Shape Demo by Jen Simmons"
+  src="https://labs.jensimmons.com/2016/examples/shapes-4.html"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+</iframe>
+
+---
+
 # Multicoluna
 
 <style scoped>
@@ -450,6 +505,7 @@ Similar ao *flow* mas divido em colunas, típico do design gráfico. Existe desd
 
 <div class="iframe-wrapper">
   <iframe
+    loading="lazy"
     height="700"
     style="width: 100%;"
     scrolling="no"
@@ -579,6 +635,7 @@ Venha pro nosso treino de surf e reprograme o seu DNA com nossas técnicas quân
 
 <div class="iframe-wrapper">
   <iframe
+    loading="lazy"
     height="700"
     style="width: 100%;"
     scrolling="no"
@@ -626,6 +683,7 @@ Exemplo:<br>Fonte de 16 a 24px pra uma largura de 400 a 600px
 
 <div class="iframe-wrapper">
   <iframe
+    loading="lazy"
     height="700"
     style="width: 100%;"
     scrolling="no"
