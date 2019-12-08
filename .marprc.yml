@@ -1,3 +1,4 @@
+html: true
 allowLocalFiles: true
 lang: pt-br
 theme: style.css
