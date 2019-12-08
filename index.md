@@ -26,6 +26,12 @@ section.two-col p {
   column-count: 2;
 }
 
+.resizable {
+  resize: both;
+  overflow: scroll;
+  margin: auto;
+}
+
 .iframe-wrapper {
   width: 100%;
   height: 700px;
@@ -49,10 +55,81 @@ iframe {
 
 ---
 
+<!-- _class: invert -->
+<!-- _footer: Photo by Matt Hardy on Unsplash -->
+![bg contrast:85% brightness:85%](images/stormy-sea.jpg)
+
+# <!-- fit --> As frustrações
+
+---
+
+# 1
+
+## Muita coisa pra gravar
+
+---
+
+# 1
+
+## <s>Muita coisa pra gravar</s>
+## Vocabulário extenso dificulta aprendizado
+
+<!-- de fato muita coisa! quantas propriedades diferentes devem existir? -->
+
+---
+
+# 2
+
+## Ai, mas a cascata
+
+<!-- você tem esse problema diariamente? isso é um pergunta honesta, porque na minha experiêccia eu não encontro isso, mesmo depois de ir pra uma empresa que não usa CSS Modules -->
+
+---
+
+# 2
+
+## <s>Ai, mas a cascata</s>
+## Cascata torna o resultado imprevisível
+
+---
+
+# 3
+
+## Eu que não mexo nisso, vai que quebra alguma coisa
+
+---
+
+# 3
+
+## <s>Eu que não mexo nisso, vai que quebra alguma coisa</s>
+## Difícil alterar e deletar código
+
+---
+
+# 4
+
+## Ah, mas o IE
+
+---
+
+# 4
+
+## <s>Ah, mas o IE</s>
+## Retrocompatibilidade trava o desenvolvimento
+
+---
+
+1. Vocabulário extenso dificulta aprendizado
+2. Cascata torna o resultado imprevisível
+3. Difícil alterar e deletar código
+4. Retrocompatibilidade trava o desenvolvimento
+
+---
+
 <!-- _header: Parte 1 -->
 <!-- _class: invert -->
 <!-- _footer: Photo by Joanna Kosinska on Unsplash -->
-# <!-- fit --> Mitos 🧙<br>vs<br>🕵 Fatos
+# <!-- fit --> Os mitos
 
 ![bg grayscale brightness:0.75](images/crystals.jpg)
 
@@ -62,7 +139,7 @@ iframe {
 
 # Mito 1 🧙
 
-Só podemos usar o que todos os browsers a que damos suporte suportam
+Se nem todo browser a que damos suporte suporta, não podemos usar
 
 ---
 
@@ -71,6 +148,10 @@ Só podemos usar o que todos os browsers a que damos suporte suportam
 <!-- _footer: Photo by Jacob Rank on Unsplash -->
 <!-- _class: hipster-quote -->
 ![bg grayscale](images/hipster.jpg)
+
+---
+
+# <!-- fit --> JS ≠ CSS
 
 ---
 
@@ -115,6 +196,28 @@ li {
 ---
 
 ![](https://caniuse.bitsofco.de/image/css-subgrid.png)
+
+---
+
+<!-- _header: Firefox 71 -->
+<!-- _footer: https://codepen.io/vhfmag/pen/XWJJxry -->
+![bg contain right](images/subgrid-full.png)
+
+```css
+ul {
+  display: grid;
+  grid-template-columns:
+    1fr 1fr;
+  grid-gap: 1em;
+}
+
+li {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows:
+    subgrid;
+}
+```
 
 ---
 
@@ -188,21 +291,42 @@ li {
 
 ---
 
+![bg contain](images/minimum-viable-experience.webp)
+
+---
+
+# <!-- fit --> JS<br>≠<br>CSS
+
+---
+
+# <!-- fit --> Turing completa<br>≠<br>DSL
+
+---
+
+## Rule of least power
+
+O príncipio de design que sugere escolher a linguagem de programação menos poderosa aplicável para um dado propósito.
+
+<!--  _footer: https://www.w3.org/2001/tag/doc/leastPower.html -->
+
+---
+
 <!-- _class: invert -->
 # Fato 1 🕵
 
-Se pode usar praticamente tudo desde que se garanta que tudo continua funcional quando não há suporte
+O CSS é resiliente, aplique _progressive enhancement_ e seja feliz
 
 ---
 
 <!-- _class: invert -->
 # Mito 2 🧙
 
-Você precisa brigar com o browser
+Você precisa brigar com o navegador
 
 ---
 
 <iframe
+  loading="lazy"
   height="700"
   style="width: 100%;"
   scrolling="no"
@@ -217,10 +341,10 @@ Você precisa brigar com o browser
 
 ---
 
-![bg grayscale](images/robot.jpg)
+![bg grayscale contrast:90% brightness:90%](images/robot.jpg)
 
 <!-- _color: white -->
-# <!-- fit --> O browser é mais<br>esperto que você
+# <!-- fit --> O navegador é mais<br>esperto que você
 
 <!-- _footer: Photo by Franck V. on Unsplash -->
 
@@ -262,9 +386,23 @@ Você precisa brigar com o browser
 <!-- _class: invert -->
 # Fato 2 🕵
 
-O browser pode inferir layout adaptativos caso se use as ferramentas adequadas e um CSS que sugira ao invés de instruir
+O navegador sabe inferir layouts adaptativos, caso se use as ferramentas certas e um CSS que sugira ao invés de instruir
 
 ---
+<!-- 
+<!-- _class: invert --/>
+# Mito 3 🧙
+
+P*rra de cascata
+
+---
+
+<!-- _class: invert --/>
+# Fato 3 🕵
+
+Use a cascata... as vezes
+
+--- -->
 
 <!-- _header: Parte 1 -->
 <!-- _class: invert -->
@@ -287,8 +425,14 @@ O browser pode inferir layout adaptativos caso se use as ferramentas adequadas e
 
 # Flow
 
-> I feel like, at this point, we are fish who are growing legs, and we’re climbing out onto land, and we’re having all these conversations about land and what land is and what it means to be on the land, but we also have to give a whole bunch of words and terms to the water, because now water’s actually a thing that’s different than land.
-> — Jen Simmons ([@jensimmons](https://twitter.com/jensimmons/))
+<style scoped>
+  p {
+    max-width: 20ch;
+    margin: 0 auto;
+  }
+</style>
+
+O bom e velho layout, que de tão padrão a gente nem se dá conta
 
 ---
 
@@ -300,7 +444,7 @@ O browser pode inferir layout adaptativos caso se use as ferramentas adequadas e
   }
 </style>
 
-Layout similar ao *flow* mas divido em colunas, típico do design gráfico. Existe desde o IE10 🤯
+Similar ao *flow* mas divido em colunas, típico do design gráfico. Existe desde o IE10 🤯
 
 ---
 
@@ -324,7 +468,7 @@ Layout similar ao *flow* mas divido em colunas, típico do design gráfico. Exis
 
 # Flex
 
-O mais imitado 🤷
+O mais imitado ¯\\\_(ツ)\_/¯
 
 ---
 
@@ -334,9 +478,43 @@ O mais imitado 🤷
 
 ---
 
+<style scoped>
+  .flex {
+    display: flex;
+    gap: 1em;
+  }
+
+  .flex * {
+    hyphens: auto;
+    font-size: 0.75em;
+  }
+
+  .flex > :nth-child(1) {
+    flex: 1 4 auto;
+  }
+
+  .flex > :nth-child(2) {
+    flex: 2 2 auto;
+  }
+
+  .flex > :nth-child(3) {
+    flex: 4 1 auto;
+  }
+</style>
+
+flex:
+
+<div class="resizable flex">
+  <button>1 4 auto</button>
+  <button>2 2 auto</button>
+  <button>4 1 auto</button>
+</div>
+
+---
+
 # Grid
 
-Apenas use. Você vai ver grid em tudo
+Um layout sem volta (tem grid em tudo, eu juro)
 
 ---
 
@@ -393,6 +571,12 @@ Venha pro nosso treino de surf e reprograme o seu DNA com nossas técnicas quân
 
 ---
 
+<!-- _footer: Photo by viklundvisuals on Unsplash -->
+
+![bg contain](images/grid-inspector.png)
+
+---
+
 <div class="iframe-wrapper">
   <iframe
     height="700"
@@ -435,7 +619,8 @@ p {
 ---
 
 **Tipografia fluida**
-Ex: de 16 a 24px, de 400 a 600px de largura de tela
+
+Exemplo:<br>Fonte de 16 a 24px pra uma largura de 400 a 600px
 
 ---
 
