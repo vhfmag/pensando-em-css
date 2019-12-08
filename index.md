@@ -378,7 +378,7 @@ Eu não consigo realizar meu design perfeito pixel a pixel na Web
 
 ---
 
-![](images/design-tools-holding-back.png)
+[![](images/design-tools-holding-back.png)](https://uxdesign.cc/design-tools-are-holding-us-back-1aca266b333e)
 
 ---
 
