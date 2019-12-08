@@ -366,20 +366,30 @@ Se você e o navegador falarem a mesma língua, você vai usar as ferramentas ce
 </small>
 
 ---
-<!-- 
-<!-- _class: invert --/>
+
+<!-- _class: invert -->
 # Mito 3 🧙
 
-P*rra de cascata
+Eu não consigo realizar meu design perfeito pixel a pixel na Web
 
 ---
 
-<!-- _class: invert --/>
+[![width:1100px](images/screen-sizes.png)](https://www.screensizemap.com/)
+
+---
+
+![](images/design-tools-holding-back.png)
+
+---
+
+<!-- _class: invert -->
 # Fato 3 🕵
 
-Use a cascata... as vezes
+Não existe *pixel perfect*. Tamanho de tela, características de display e condições ambientais mudam o seu design.
 
---- -->
+É preciso fazer nossos designs não **apesar** do caos, mas **para** o caos.
+
+---
 
 <!-- _header: Parte 1 -->
 <!-- _class: invert -->
@@ -680,9 +690,57 @@ Venha pro nosso treino de surf e reprograme o seu DNA com nossas técnicas quân
 
 ```css
 p {
-  width: 70ch; /* 🤷 */
+  width: 70ch;
+  min-width: 50ch;
+  max-width: 120ch;
 }
 ```
+
+🤯
+
+---
+
+- `ch`
+- `em`
+- `rem`
+- `vw`
+- `vh`
+
+---
+
+Espaço entre elementos
+
+---
+
+```css
+ul.articles li {
+  margin-top: 1em;
+}
+
+ul.articles li:first-child {
+  margin-top: unset;
+}
+```
+
+---
+
+```css
+ul.articles > * + * {
+  margin-top: 1em;
+}
+```
+
+---
+
+- `*`
+- `>`
+- `~`
+- `[attr]`
+- `[attr=value]`
+- `[attr~=value]`
+- `[attr^=value]`
+- `[attr$=value]`
+- `[attr*=value]`
 
 ---
 
@@ -741,3 +799,21 @@ body {
   font-size: clamp(16px, 4vw, 24px);
 }
 ```
+
+---
+
+<!-- _class: invert -->
+
+Recapitulando
+
+---
+
+- Sugira, não mande
+- Não existe *pixel perfect*
+- Dá pra usar novas funcionalidades hoje!
+- Conheça e experimente os layouts da Web
+- Deve ter uma forma de expressar o que você precisa
+
+---
+
+![bg grayscale contrast:80% brightness:80%](images/keanu-reeves-kiss.webp)
