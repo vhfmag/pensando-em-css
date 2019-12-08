@@ -705,6 +705,8 @@ p {
 - `rem`
 - `vw`
 - `vh`
+- `max-content`
+- `min-content`
 
 ---
 
