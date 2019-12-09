@@ -1,7 +1,7 @@
 ---
 title: Pensando em CSS
 url: https://pensando-em-css.netlify.com
-image: images/og-image.png
+image: https://pensando-em-css.netlify.com/images/og-image.png
 description: Falando a mesma língua que o navegador
 
 theme: my-uncover
