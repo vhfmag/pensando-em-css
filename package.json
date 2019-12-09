@@ -11,7 +11,7 @@
   },
   "scripts": {
     "generate-og-image": "marp --image png -o images/og-image.png index.md",
-    "serve": "marp --html -s .",
+    "serve": "marp -s .",
     "build": "marp index.md -o public/index.html && cp -r images public/images"
   }
 }
