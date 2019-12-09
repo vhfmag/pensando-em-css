@@ -293,19 +293,75 @@ Você sempre precisa brigar com o navegador
 
 ---
 
-<iframe
-  loading="lazy"
-  height="700"
-  style="width: 100%; margin: auto"
-  scrolling="no"
-  title="Fallback de grid"
-  src="https://codepen.io/brundolf/embed/gRaREv?height=700&theme-id=dark&default-tab=css,result"
-  frameborder="no"
-  allowtransparency="true"
-  allowfullscreen="true"
->
-  See the Pen <a href='https://codepen.io/brundolf/pen/gRaREv'>CSS is Awesome</a> by Brandon (<a href='https://codepen.io/brundolf'>@brundolf</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<!-- _class: css-is-awesome -->
+
+<div>
+  <style contenteditable>.css-is-awesome-1 {
+  width: 223px;
+}</style>
+</div>
+
+<div class="css-is-awesome-1" lang="en">
+  CSS is Awesome
+</div>
+
+---
+
+<!-- _class: css-is-awesome -->
+
+<div>
+  <style contenteditable>.css-is-awesome-2 {
+  width: 223px;
+  word-wrap: break-word !important;
+}</style>
+</div>
+
+<div class="css-is-awesome-2" lang="en">
+  CSS is Awesome
+</div>
+
+---
+
+<!-- _class: css-is-awesome -->
+
+<div>
+  <style contenteditable>.css-is-awesome-3 {
+  width: 223px;
+  hyphens: auto;
+}</style>
+</div>
+
+<div class="css-is-awesome-3" lang="en">
+  CSS is Awe&shy;some
+</div>
+
+---
+
+<!-- _class: css-is-awesome -->
+
+<div>
+  <style contenteditable>.css-is-awesome-4 {
+  width: 223px;
+  min-width: min-content;
+}</style>
+</div>
+
+<div class="css-is-awesome-4" lang="en">
+  CSS is Awesome
+</div>
+
+---
+
+[![w:1100px](images/min-content-support.png)](https://caniuse.com/#feat=mdn-css_properties_width_min-content)
+
+---
+
+![bg grayscale contrast:90% brightness:90%](images/robot.jpg)
+
+<!-- _color: white -->
+# <!-- fit --> O navegador é mais<br>esperto que você
+
+<!-- _footer: Photo by Franck V. on Unsplash -->
 
 ---
 
@@ -322,15 +378,6 @@ Você sempre precisa brigar com o navegador
 >
   See the Pen <a href='https://codepen.io/vhfmag/pen/PowoMGq'>Fallback de grid</a> by Victor Magalhães (<a href='https://codepen.io/vhfmag'>@vhfmag</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
-
----
-
-![bg grayscale contrast:90% brightness:90%](images/robot.jpg)
-
-<!-- _color: white -->
-# <!-- fit --> O navegador é mais<br>esperto que você
-
-<!-- _footer: Photo by Franck V. on Unsplash -->
 
 ---
 
@@ -361,6 +408,7 @@ Se você e o navegador falarem a mesma língua, você vai usar as ferramentas ce
 <small style="margin-top: 1em;">
 
 - Evite tamanhos fixos e `position: absolute`
+- Explore flex e grid pra saber suas aplicações
 - Pesquise o layout mais apropriado pro seu caso
 
 </small>
@@ -370,7 +418,7 @@ Se você e o navegador falarem a mesma língua, você vai usar as ferramentas ce
 <!-- _class: invert -->
 # Mito 3 🧙
 
-Eu não consigo realizar meu design perfeito pixel a pixel na Web
+Não dá pra realizar meu design *pixel perfect* ™
 
 ---
 
@@ -385,7 +433,7 @@ Eu não consigo realizar meu design perfeito pixel a pixel na Web
 <!-- _class: invert -->
 # Fato 3 🕵
 
-Não existe *pixel perfect*. Tamanho de tela, características de display e condições ambientais mudam o seu design.
+Não existe *pixel perfect* ™. Tamanho de tela, características de display e condições ambientais mudam o seu design.
 
 É preciso fazer nossos designs não **apesar** do caos, mas **para** o caos.
 
@@ -439,15 +487,15 @@ Não existe *pixel perfect*. Tamanho de tela, características de display e cond
   }
 </style>
 
-- `block` ↔ `block flow-root`
-- `inline-block` ↔ `inline flow-root`
-- `inline` ↔ `inline flow`
-- `table` ↔ `block table`
-- `inline-table` ↔ `inline table`
-- `grid` ↔ `block grid`
-- `inline-grid` ↔ `inline grid`
-- `flex` ↔ `block flex`
-- `inline-flex` ↔ `inline flex`
+* `block` ↔ `block flow-root`
+* `inline-block` ↔ `inline flow-root`
+* `inline` ↔ `inline flow`
+* `table` ↔ `block table`
+* `inline-table` ↔ `inline table`
+* `grid` ↔ `block grid`
+* `inline-grid` ↔ `inline grid`
+* `flex` ↔ `block flex`
+* `inline-flex` ↔ `inline flex`
 
 ---
 
@@ -479,20 +527,12 @@ Dita como o elemento dispõe seus filhos
 
 # Flow
 
-<style scoped>
-  p {
-    max-width: 20ch;
-    margin: 0 auto;
-  }
-</style>
-
-O bom e velho layout, que de tão padrão a gente nem se dá conta
+É, isso tem um nome agora
 
 ---
 
-- Filhos com ODT = `block` tomam a linha inteira
-- Filhos com ODT = `inline` tomam parte da linha e podem ser dividos entre linhas
-- A propriedade `float` permite que múltiplos elementos dividam a mesma linha
+- `block` vs `inline`
+- `float`
 
 ---
 
@@ -519,6 +559,19 @@ O bom e velho layout, que de tão padrão a gente nem se dá conta
 </style>
 
 Similar ao *flow* mas divido em colunas, típico do design gráfico. Existe desde o IE10 🤯
+
+---
+
+<iframe
+  loading="lazy"
+  height="700"
+  style="width: 100%;"
+  src="https://labs.jensimmons.com/2016/examples/multicolumn-2.html"
+  frameborder="no"
+  allowtransparency="true"
+  allowfullscreen="true"
+>
+</iframe>
 
 ---
 
@@ -557,6 +610,7 @@ O mais imitado ¯\\\_(ツ)\_/¯
   .flex {
     display: flex;
     gap: 1em;
+    padding: 0.5em;
   }
 
   .flex * {
@@ -577,12 +631,36 @@ O mais imitado ¯\\\_(ツ)\_/¯
   }
 </style>
 
-flex:
+Proporção de crescimento e encolhimento com `flex:`
 
-<div class="resizable flex">
+<div class="resizable-x flex">
   <button>1 4 auto</button>
   <button>2 2 auto</button>
   <button>4 1 auto</button>
+</div>
+
+---
+
+<style scoped>
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+    background-color: #eee;
+    background-image: repeating-linear-gradient(-45deg, #ddd 0px, #ddd 3px, #eee 3px, #eee 10px)
+  }
+
+  .center p {
+    background-color: rgba(255, 255, 255, 0.5);
+    max-width: 20ch;
+    backdrop-filter: blur(5px);
+    padding: 1em;
+  }
+</style>
+
+<div class="center">
+  <p>Finalmente é trivial centralizar 😊</p>
 </div>
 
 ---
@@ -595,7 +673,6 @@ Um layout sem volta (tem grid em tudo, eu juro)
 
 - Layout bidimensional
 - Nova unidade: `fr`
-- Novos valores: `min-content`, `max-content`
 - Novas funções: `repeat`, `minmax`, `fit-content`
 
 ---
@@ -652,7 +729,7 @@ Venha pro nosso treino de surf e reprograme o seu DNA com nossas técnicas quân
 
 ---
 
-<div class="iframe-wrapper">
+<div class="iframe-wrapper resizable-x">
   <iframe
     loading="lazy"
     height="700"
@@ -811,10 +888,10 @@ Recapitulando
 ---
 
 - Sugira, não mande
-- Não existe *pixel perfect*
-- Dá pra usar novas funcionalidades hoje!
+- Não existe *pixel perfect* ™
+- Use novas funcionalidades hoje!
 - Conheça e experimente os layouts da Web
-- Deve ter uma forma de expressar o que você precisa
+- Deve existir uma forma de expressar seu caso
 
 ---
 

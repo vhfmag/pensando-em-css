@@ -3,7 +3,38 @@
  */
 
 @import 'uncover';
- 
+
+section.css-is-awesome {
+  flex-direction: row;
+  align-items: center;
+  gap: 2em;
+  text-align: left;
+}
+
+section.css-is-awesome [class^=css-is-awesome] {
+  font-family: arial;
+  text-transform: uppercase;
+  font-size:64px;
+  border:4px solid black;
+  overflow: visible;
+  padding: 0px 5px;
+  font-weight: bold;
+  word-wrap: initial;
+}
+
+style[contenteditable] {
+  display: block;
+  white-space: pre;
+  font-size: 2rem;
+  background-color: #f2f1f4;
+  color: #202228;
+  box-shadow: 0 4px 8px rgba(0,0,0,.2);
+  line-height: 1.15;
+  padding: .4em .6em;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+  letter-spacing: 0;
+}
+
 section.lead h1, section.lead h2 {
   color: hsl(0, 0%, 100%);
 }
@@ -30,12 +61,6 @@ section.three-col p {
   column-count: 3;
 }
 
-.resizable {
-  resize: both;
-  overflow: scroll;
-  margin: auto;
-}
-
 .iframe-wrapper {
   width: 100%;
   height: 700px;
@@ -47,6 +72,26 @@ section.three-col p {
 iframe {
   width: 100% !important;
   height: 100% !important;
+}
+
+.resizable-x {
+  resize: horizontal;
+  overflow-x: scroll;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.resizable-y {
+  resize: vertical;
+  overflow-y: scroll;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.resizable {
+  resize: both;
+  overflow: scroll;
+  margin: auto;
 }
 
 ol li::marker {
