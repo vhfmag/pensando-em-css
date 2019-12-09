@@ -221,6 +221,14 @@ li {
 
 ---
 
+Extensão recomendada
+
+# Feature Queries Manager
+
+Pra [Chrome](https://chrome.google.com/webstore/detail/feature-queries-manager/fbhgnconlfgmienbmpbeeenffagggonp) e [Firefox](https://addons.mozilla.org/en-US/firefox/addon/feature-queries-manager/)
+
+---
+
 ![bg contain](images/minimum-viable-experience.webp)
 
 ---
