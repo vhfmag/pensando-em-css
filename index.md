@@ -137,28 +137,6 @@ async function* hispter(val) {
 
 ---
 
-<!-- _header: Firefox 71 -->
-<!-- _footer: https://codepen.io/vhfmag/pen/XWJJxry -->
-![bg contain right](images/subgrid-full.png)
-
-```css
-ul {
-  display: grid;
-  grid-template-columns:
-    1fr 1fr;
-  grid-gap: 1em;
-}
-
-li {
-  display: grid;
-  grid-row: span 3;
-  grid-template-rows:
-    subgrid;
-}
-```
-
----
-
 ![](https://caniuse.bitsofco.de/image/css-grid.png)
 
 ---
@@ -167,82 +145,66 @@ li {
 
 ---
 
-<!-- _header: Firefox 71 -->
-<!-- _footer: https://codepen.io/vhfmag/pen/XWJJxry -->
-![bg contain right](images/subgrid-full.png)
-
-```css
-ul {
-  display: grid;
-  grid-template-columns:
-    1fr 1fr;
-  grid-gap: 1em;
-}
-
-li {
-  display: grid;
-  grid-row: span 3;
-  grid-template-rows:
-    subgrid;
-}
-```
+# <!-- fit --> 🤷
 
 ---
 
-<!-- _header: Chrome 78 -->
-<!-- _footer: https://codepen.io/vhfmag/pen/XWJJxry -->
-![bg contain right](images/subgrid-chrome-nofallback.png)
-
-```css
-ul {
-  display: grid;
-  grid-template-columns:
-    1fr 1fr;
-  grid-gap: 1em;
-}
-
-li {
-  display: grid;
-  grid-row: span 3;
-  grid-template-rows:
-    subgrid;
-}
-```
+<div class="iframe-wrapper resizable-x">
+  <iframe
+    loading="lazy"
+    height="700"
+    style="width: 100%;"
+    scrolling="no"
+    title="Fallback de grid"
+    src="https://codepen.io/vhfmag/embed/XWJJxry?height=700&theme-id=dark&default-tab=result"
+    frameborder="no"
+    allowtransparency="true"
+    allowfullscreen="true"
+  >
+    See the Pen <a href='https://codepen.io/vhfmag/pen/XWJJxry'>Fallback de grid</a> by Victor Magalhães (<a href='https://codepen.io/vhfmag'>@vhfmag</a>) on <a href='https://codepen.io'>CodePen</a>.
+  </iframe>
+</div>
 
 ---
 
-<!-- _header: Chrome 78 -->
-<!-- _footer: https://codepen.io/vhfmag/pen/XWJJxry -->
-![bg contain right](images/subgrid-full.png)
-
-```css
-li {
-  display: flex;
-  flex-direction: column;
-}
-
-@supports (
-  grid-template-rows: subgrid
-) {
-  li {
-    display: grid;
-    grid-row: span 3;
-    grid-template-rows:
-      subgrid;
+<style scoped>
+  section {
+    flex-direction: row;
+    margin: 0 -1rem;
+    align-items: center;
   }
+
+  pre {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+</style>
+
+```css
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.5rem;
+}
+
+li {
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
 }
 ```
 
----
-
-<!-- _header: IE 11 -->
-<!-- _footer: https://codepen.io/vhfmag/pen/XWJJxry -->
-![bg contain right](images/subgrid-ie.png)
-
 ```css
-li {
-  display: flex;
-  flex-direction: column;
+@supports(display: grid) {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(200px, 1fr)
+    );
+    grid-gap: 1em;
+  }
 }
 
 @supports (
