@@ -94,6 +94,24 @@ autoScaling: true
 
 ---
 
+# <!-- fit --> 🎁
+
+---
+
+# 5
+
+## CSS é visto como fácil e subestimado por <q>não ser programação</q>
+
+---
+
+1. Vocabulário extenso dificulta aprendizado
+2. Cascata torna o resultado final imprevisível
+3. Difícil alterar e deletar código
+4. Retrocompatibilidade trava o desenvolvimento
+5. CSS é subestimado
+
+---
+
 <!-- _header: Parte 1 -->
 <!-- _class: invert -->
 <!-- _footer: Photo by Joanna Kosinska on Unsplash -->
@@ -243,7 +261,7 @@ Pra [Chrome](https://chrome.google.com/webstore/detail/feature-queries-manager/f
 
 ## Rule of least power
 
-O príncipio de design que sugere escolher a linguagem de programação menos poderosa aplicável para um dado propósito.
+Príncipio de design que recomenda escolher a linguagem de programação menos poderosa aplicável para um dado propósito.
 
 <!--  _footer: https://www.w3.org/2001/tag/doc/leastPower.html -->
 
@@ -375,7 +393,7 @@ Você sempre precisa brigar com o navegador
 
 Se você e o navegador falarem a mesma língua, você vai usar as ferramentas certas e delegar a ele o que ele sabe fazer melhor do que você
 
-<small style="margin-top: 1em;">
+<small data-marpit-fragment style="margin-top: 1em;">
 
 - Evite tamanhos fixos e `position: absolute`
 - Explore flex e grid pra saber suas aplicações
@@ -393,6 +411,15 @@ Não dá pra realizar meu design *pixel perfect* ™
 ---
 
 [![width:1100px](images/screen-sizes.png)](https://www.screensizemap.com/)
+
+---
+
+- Celular
+- Tablet
+- Computador
+- SmartTV
+- SmartWatch
+- SmartWhatever ™
 
 ---
 
@@ -437,6 +464,22 @@ Não existe *pixel perfect* ™. Tamanho de tela, características de display e 
 
 ---
 
+# <q>Outer display type (ODT)</q>
+
+`inline` & `block`
+
+Dita como o elemento se comporta no *flow layout*
+
+---
+
+# <q>Inner display type (IDT)</q>
+
+`flow`, `flow-root`, `table`, `flex` & `grid`
+
+Dita como o elemento dispõe seus filhos
+
+---
+
 <style scoped>
   li {
     display: block grid;
@@ -466,22 +509,6 @@ Não existe *pixel perfect* ™. Tamanho de tela, características de display e 
 * `inline-grid` ↔ `inline grid`
 * `flex` ↔ `block flex`
 * `inline-flex` ↔ `inline flex`
-
----
-
-# <q>Outer display type (ODT)</q>
-
-`inline` & `block`
-
-Dita como o elemento se comporta no *flow layout*
-
----
-
-# <q>Inner display type (IDT)</q>
-
-`flow`, `flow-root`, `table`, `flex` & `grid`
-
-Dita como o elemento dispõe seus filhos
 
 ---
 
@@ -616,7 +643,7 @@ Proporção de crescimento e encolhimento com `flex:`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3em;
+    padding: 1em;
     background-color: #eee;
     background-image: repeating-linear-gradient(-45deg, #ddd 0px, #ddd 3px, #eee 3px, #eee 10px)
   }
@@ -624,12 +651,12 @@ Proporção de crescimento e encolhimento com `flex:`
   .center p {
     background-color: rgba(255, 255, 255, 0.5);
     max-width: 20ch;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(2px);
     padding: 1em;
   }
 </style>
 
-<div class="center">
+<div class="center resizable">
   <p>Finalmente é trivial centralizar 😊</p>
 </div>
 
@@ -799,7 +826,7 @@ Exemplo:<br>Fonte de 16 a 24px pra uma largura de 400 a 600px
 
 ---
 
-<div class="iframe-wrapper">
+<div class="iframe-wrapper resizable-x">
   <iframe
     loading="lazy"
     height="700"
