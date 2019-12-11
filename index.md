@@ -70,7 +70,7 @@ autoScaling: true
 # 3
 
 ## <s>Eu que não mexo nisso, vai que quebra alguma coisa</s>
-## Difícil alterar e deletar código
+## Difícil alterar, deletar e reutilizar código
 
 ---
 
@@ -89,7 +89,7 @@ autoScaling: true
 
 1. Vocabulário extenso dificulta aprendizado
 2. Cascata torna o resultado final imprevisível
-3. Difícil alterar e deletar código
+3. Difícil alterar, deletar e reutilizar código
 4. Retrocompatibilidade trava o desenvolvimento
 
 ---
@@ -100,15 +100,15 @@ autoScaling: true
 
 # 5
 
-## CSS é visto como fácil e subestimado por <q>não ser programação</q>
+## CSS é subestimado e negligenciado por <q>não ser programação</q>
 
 ---
 
 1. Vocabulário extenso dificulta aprendizado
 2. Cascata torna o resultado final imprevisível
-3. Difícil alterar e deletar código
+3. Difícil alterar, deletar e reutilizar código
 4. Retrocompatibilidade trava o desenvolvimento
-5. CSS é subestimado
+5. CSS é subestimado e negligenciado
 
 ---
 
@@ -239,11 +239,10 @@ li {
 
 ---
 
-Extensão recomendada
 
 # Feature Queries Manager
 
-Pra [Chrome](https://chrome.google.com/webstore/detail/feature-queries-manager/fbhgnconlfgmienbmpbeeenffagggonp) e [Firefox](https://addons.mozilla.org/en-US/firefox/addon/feature-queries-manager/)
+Extensão recomendada pra [Chrome](https://chrome.google.com/webstore/detail/feature-queries-manager/fbhgnconlfgmienbmpbeeenffagggonp) e [Firefox](https://addons.mozilla.org/en-US/firefox/addon/feature-queries-manager/)
 
 ---
 
@@ -425,6 +424,12 @@ Não dá pra realizar meu design *pixel perfect* ™
 
 [![](images/design-tools-holding-back.png)](https://uxdesign.cc/design-tools-are-holding-us-back-1aca266b333e)
 
+<div data-marpit-fragment>
+
+O processo de design sempre termina no front
+
+</div>
+
 ---
 
 <!-- _class: invert -->
@@ -555,7 +560,7 @@ Dita como o elemento dispõe seus filhos
   }
 </style>
 
-Similar ao *flow* mas divido em colunas, típico do design gráfico. Existe desde o IE10 🤯
+Similar ao *flow* mas divido em colunas, típico do *print design*. Existe desde o IE10 🤯
 
 ---
 
@@ -741,6 +746,18 @@ Venha pro nosso treino de surf e reprograme o seu DNA com nossas técnicas quân
     See the Pen <a href='https://codepen.io/vhfmag/pen/XWJJxry'>Fallback de grid</a> by Victor Magalhães (<a href='https://codepen.io/vhfmag'>@vhfmag</a>) on <a href='https://codepen.io'>CodePen</a>.
   </iframe>
 </div>
+
+---
+
+# Quando usar cada layout?
+
+---
+
+Quando você precisar de \<br> pra espaço ou mudar seu HTML pro layout, considere Flexbox e Grid. Eles mudam **tudo**.
+
+---
+
+Vejam [Everything you know about Web Design just changed](https://www.youtube.com/watch?v=jBwBACbRuGY&t=1919), de [Jen Simmons](https://jensimmons.com).
 
 ---
 
