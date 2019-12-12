@@ -911,4 +911,8 @@ Recapitulando
 
 ---
 
+https://pensando-em-css.netlify.com/
+
+---
+
 ![bg grayscale contrast:80% brightness:80%](images/keanu-reeves-kiss.webp)
