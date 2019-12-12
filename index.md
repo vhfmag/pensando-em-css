@@ -424,6 +424,10 @@ Não dá pra realizar meu design *pixel perfect* ™
 
 [![](images/design-tools-holding-back.png)](https://uxdesign.cc/design-tools-are-holding-us-back-1aca266b333e)
 
+---
+
+![bg contain](images/figma.png)
+
 <div data-marpit-fragment>
 
 O processo de design sempre termina no front
