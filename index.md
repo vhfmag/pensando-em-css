@@ -757,7 +757,9 @@ Quando você precisar de \<br> pra espaço ou mudar seu HTML pro layout, conside
 
 ---
 
-Vejam [Everything you know about Web Design just changed](https://www.youtube.com/watch?v=jBwBACbRuGY&t=1919), de [Jen Simmons](https://jensimmons.com).
+Talk recomendada:
+
+[Everything you know about Web Design just changed](https://www.youtube.com/watch?v=jBwBACbRuGY&t=1919) de [Jen Simmons](https://jensimmons.com).
 
 ---
 
