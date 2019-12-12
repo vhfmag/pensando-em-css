@@ -428,11 +428,9 @@ Não dá pra realizar meu design *pixel perfect* ™
 
 ![bg contain](images/figma.png)
 
-<div data-marpit-fragment>
+---
 
 O processo de design sempre termina no front
-
-</div>
 
 ---
 
@@ -636,8 +634,6 @@ O mais imitado ¯\\\_(ツ)\_/¯
     flex: 4 1 auto;
   }
 </style>
-
-Proporção de crescimento e encolhimento com `flex:`
 
 <div class="resizable-x flex">
   <button>1 4 auto</button>
