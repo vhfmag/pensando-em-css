@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@marp-team/marp-cli": "^0.16.2"
+    "@marp-team/marp-cli": "0.17.0"
   },
   "scripts": {
     "generate-og-image": "marp --image png -o images/og-image.png index.md",
